@@ -203,7 +203,7 @@ services:
     image: systementry-9950
     container_name: systementry-9950
     ports: 
-      - 8020:8020
+      - 8012:8012
     env_file: .env
     depends_on:
       - mongo
@@ -219,7 +219,7 @@ services:
     image: sleeptrack-9950
     container_name: sleeptrack-9950
     ports: 
-      - 8021:8021
+      - 8013:8013
     env_file: .env
     depends_on:
       - mongo

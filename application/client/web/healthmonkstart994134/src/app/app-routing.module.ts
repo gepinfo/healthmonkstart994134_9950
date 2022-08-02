@@ -32,6 +32,12 @@ const routes: Routes = [
        { path: '', component: TemplateComponent, pathMatch: 'full'   } ,
 { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 
+{ path : 'sleepgoal', loadChildren: () => import('./sleepgoal/sleepgoal.module').then(m => m.SleepgoalModule), canActivate: [AuthGuard] } , 
+{ path : 'sleeptracklandingsection', loadChildren: () => import('./sleeptracklandingsection/sleeptracklandingsection.module').then(m => m.SleeptracklandingsectionModule), canActivate: [AuthGuard] } , 
+{ path : 'edittherecommended', loadChildren: () => import('./edittherecommended/edittherecommended.module').then(m => m.EdittherecommendedModule), canActivate: [AuthGuard] } , 
+{ path : 'popupscreendate ', loadChildren: () => import('./popupscreendate /popupscreendate .module').then(m => m.Popupscreendate Module), canActivate: [AuthGuard] } , 
+{ path : 'deletedthedata ', loadChildren: () => import('./deletedthedata /deletedthedata .module').then(m => m.Deletedthedata Module), canActivate: [AuthGuard] } , 
+{ path : 'popupscreentime', loadChildren: () => import('./popupscreentime/popupscreentime.module').then(m => m.PopupscreentimeModule), canActivate: [AuthGuard] } , 
 ];
 
 @NgModule({
